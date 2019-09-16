@@ -1,0 +1,46 @@
+.slider {
+  position: relative;
+}
+
+.slider__arrow-left, .slider__arrow-right {
+  position: absolute;
+  width: rem(70px);
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  opacity: 0.5;
+  
+  &:hover {
+    opacity: 1;
+  }
+  
+  @include phones() {
+    width: rem(35px);    
+  }
+}
+
+.slider__arrow-left {
+  left: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slider__arrow-right {
+  right: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slider__arrow-left-icon, .slider__arrow-right-icon {
+  width: rem(29px);
+  height: rem(14px);
+  transform: rotate(90deg);
+}
+
+.slider__arrow-left-icon {
+  transform: rotate(90deg);
+}
+
+.slider__arrow-right-icon {
+  transform: rotate(-90deg);
+}

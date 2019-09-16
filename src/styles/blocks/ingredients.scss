@@ -1,0 +1,55 @@
+$ingredients-icon-side: rem(35px);
+
+.ingredients {
+  position: absolute;
+  top: -25%;
+  left: $compound-side;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: rem(5px);
+  padding: 0 rem(20px) rem(15px);
+  width: rem(270px);
+  font-size: rem(14px);
+  line-height: rem(24px);
+  @include ubuntu();
+  display: none;
+  justify-content: space-between;
+
+  @include tablets() {
+    width: rem(320px);
+  }
+
+  @include phones() {
+    width: rem(360px);
+  }
+}
+
+.ingredients__cross-container {
+  margin-left: rem(15px);
+}
+
+.ingredients__container {
+  flex: 1;
+}
+
+.ingredients-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(15px);
+}
+
+.ingredients-params {
+  display: flex;
+  align-items: center;
+}
+
+.ingredients-icon {
+  width: $ingredients-icon-side;
+  height: $ingredients-icon-side;
+  margin-right: rem(20px);
+}
+
+.ingredients-name {
+  font-weight: 500;
+}

@@ -1,0 +1,34 @@
+$compound-side: rem(90px);
+
+.compound {
+  position: absolute;
+  width: $compound-side;
+  height: $compound-side;
+  background: $light-orange;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -25%;
+  left: 0;
+  cursor: pointer;
+
+  &:hover {
+    ~ .ingredients {
+      display: flex;
+    }
+  }
+}
+
+.compound-icon {
+  height: rem(45px);
+  width: rem(45px);
+}
+
+.compound-text {
+  @include gagalin();
+  color: white;
+  font-size: 14px;
+  line-height: 28px;
+}

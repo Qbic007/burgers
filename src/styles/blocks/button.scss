@@ -1,0 +1,48 @@
+.button {
+  border: none;
+  padding: rem(12px) rem(15px);
+  border-radius: rem(5px);
+  background: $main-orange;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: rem(13px);
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-hover-button-orange;
+  }
+
+  &--clear {
+    background: transparent;
+    text-transform: none;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &--gray {
+    background: $main-dark-grey;
+
+    &:hover {
+      background: $color-hover-button-grey;
+    }
+  }
+
+  &--view--desktop {
+    @include phones {
+      display: none;
+    }
+
+  }
+
+  &--view--mobile {
+    display: none;
+
+    @include phones {
+      display: inline-block;
+    }
+  }
+}
+
