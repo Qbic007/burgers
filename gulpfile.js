@@ -33,6 +33,18 @@ task('copy:html', () => {
         .pipe(reload({ stream: true }));
 });
 
+task('copy:fonts', () => {
+    return src(`${SRC_PATH}/fonts/*.woff`)
+        .pipe(dest(`${DIST_PATH}/fonts/`))
+        .pipe(reload({ stream: true }));
+});
+
+task('copy:images', () => {
+    return src(`${SRC_PATH}/images/**/*`)
+        .pipe(dest(`${DIST_PATH}/images/`))
+        .pipe(reload({ stream: true }));
+});
+
 task('styles', () => {
     return src([...STYLE_LIBS, 'src/styles/main.scss'])
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -41,7 +53,7 @@ task('styles', () => {
         .pipe(sass().on('error', sass.logError))
         .pipe(px2rem())
         .pipe(gulpif(env === 'prod', autoprefixer({
-            browsers: ['last 2 versions'],
+            overrideBrowserslist: ['last 2 versions'],
             cascade: false
         })))
         .pipe(gulpif(env === 'prod', gcmq()))
@@ -111,7 +123,7 @@ task('watch', () => {
 task('default',
     series(
         'clean',
-        parallel('copy:html', 'styles', 'scripts', 'icons'),
+        parallel('copy:html', 'copy:fonts', 'copy:images', 'styles', 'scripts', 'icons'),
         parallel('watch', 'server')
     )
 );
@@ -119,5 +131,5 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('copy:html', 'styles', 'scripts', 'icons'))
+        parallel('copy:html', 'copy:fonts', 'copy:images', 'styles', 'scripts', 'icons'))
 );
