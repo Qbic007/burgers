@@ -6,6 +6,7 @@
 
 .team-acco__item {
   margin-bottom: rem(40px);
+  transition: height 2s;
 
   @include tablets {
     margin-bottom: rem(30px);
@@ -15,7 +16,7 @@
     margin-bottom: 0;
   }
 
-  &.open {
+  &.active {
     .team-acco__trigger {
       color: $main-yellow;
 
@@ -73,7 +74,7 @@
   }
 }
 
-.open .team-acco__content {
+.active .team-acco__content {
   display: flex;
 
   @include tablets() {
@@ -82,7 +83,6 @@
 }
 
 .team-acco__content {
-  @extend %clearfix;
   padding-top: rem(14px);
   display: none;
 
@@ -136,4 +136,5 @@
   @include ubuntu(light);
   color: #fff;
   font-size: rem(14px);
+  line-height: rem(24px);
 }

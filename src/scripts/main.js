@@ -19,22 +19,22 @@ $(document).ready(function () {
         $('#ingredients').show();
     });
 
-    $('#teamAcco').accordable({
-        speed: 300,
-        addClasses: true,
-        easing: 'swing'
-    });
+    accordeon('team');
+    accordeon('menu');
 
-    let menuAccoTrigger = $('.menu-acco__trigger');
-    menuAccoTrigger.on('click', function () {
-        let self = $(this);
-        $('.menu-acco__item').each(function (index, elem) {
-            let menuAccoItem = $(elem);
-            if (menuAccoItem.hasClass('active')) {
-                menuAccoItem.removeClass('active');
+    function accordeon(blockName) {
+        let blockAccoTrigger = $('.' + blockName +'-acco__trigger');
+        blockAccoTrigger.on('click', function (elem) {
+            elem.preventDefault();
+
+            let self = $(this);
+            let active = self.closest('.' + blockName + '-acco__item').hasClass('active');
+            blockAccoTrigger.closest('.' + blockName + '-acco__item').removeClass('active');
+            if (active) {
+                self.closest('.' + blockName + '-acco__item').removeClass('active');
+            } else {
+                self.closest('.' + blockName + '-acco__item').addClass('active');
             }
         });
-        self.parents('.menu-acco__item').toggleClass('active');
-        return false;
-    });
+    }
 });
