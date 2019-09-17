@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.702;fill: #e35028 } 
+	</style>
+	<g id="burgers">
+		<g id=" composition">
+			<g id="products">
+				<path id="Rounded Rectangle 1" class="shp0" d="M18.49 4.34L4.34 18.48C3.56 19.27 2.3 19.27 1.51 18.48C0.73 17.7 0.73 16.44 1.51 15.66L15.66 1.51C16.44 0.73 17.7 0.73 18.49 1.51C19.27 2.29 19.27 3.56 18.49 4.34ZM4.34 1.51L18.49 15.66C19.27 16.44 19.27 17.7 18.49 18.48C17.7 19.27 16.44 19.27 15.66 18.48L1.51 4.34C0.73 3.56 0.73 2.29 1.51 1.51C2.3 0.73 3.56 0.73 4.34 1.51Z" />
+			</g>
+		</g>
+	</g>
+</svg>
