@@ -168,6 +168,19 @@ $(document).ready(function () {
     }
 
     modalCloseIcon.on('click', function () {
-        modal.hide();
+        modal.css('display', 'none');
+    });
+
+    //модалка в отзывах
+
+    let reviewsDetailsButton = $('.js-reviews-details-button');
+
+    reviewsDetailsButton.on('click', function () {
+        let self = $(this);
+        let reviewsContainer = self.closest('.js-reviews-container');
+        let reviewsTitle = reviewsContainer.find('.js-reviews-title');
+        let reviewsDetails = reviewsContainer.find('.js-reviews-details');
+
+        showModal(reviewsTitle.html(), reviewsDetails.html());
     });
 });
