@@ -54,6 +54,23 @@ $(document).ready(function () {
         },
     });
 
+    // кнопка заказать
+
+    document.querySelector('.js-order-button').addEventListener('click', function (e) {
+        e.preventDefault();
+        onePageScroller.slideTo(7, 0);
+    });
+
+    // навигация меню
+
+    let jsNavItem=$('.js-nav-item');
+
+    jsNavItem.on('click', function (elem) {
+        elem.preventDefault();
+
+        let self = $(this);
+        onePageScroller.slideTo(self.data('page'), 0);
+    });
 
     // Якарта
 

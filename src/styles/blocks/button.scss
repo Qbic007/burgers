@@ -8,6 +8,7 @@
   font-size: 13px;
   outline: none;
   cursor: pointer;
+  z-index: 3000;
 
   &:hover {
     background: $color-hover-button-orange;

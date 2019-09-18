@@ -77,6 +77,8 @@
 }
 
 .order__form-row_double {
+  display: flex;
+  justify-content: space-between;
   margin-left: -20px;
   .order__form-block {
     width: calc(100% / 2 - 20px);
