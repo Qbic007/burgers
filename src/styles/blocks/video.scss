@@ -1,0 +1,19 @@
+.video {
+  background: url('images/bg/video.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+
+  .title {
+    margin-bottom: 80px;
+    @include tablets {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.video__player {
+  outline: none;
+}

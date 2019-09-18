@@ -45,6 +45,12 @@ task('copy:images', () => {
         .pipe(reload({ stream: true }));
 });
 
+task('copy:videos', () => {
+    return src(`${SRC_PATH}/videos/*`)
+        .pipe(dest(`${DIST_PATH}/videos/`))
+        .pipe(reload({ stream: true }));
+});
+
 task('styles', () => {
     return src([...STYLE_LIBS, 'src/styles/main.scss'])
         .pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -118,7 +124,7 @@ task('watch', () => {
 task('default',
     series(
         'clean',
-        parallel('copy:html', 'copy:fonts', 'copy:images', 'styles', 'scripts', 'icons'),
+        parallel('copy:html', 'copy:fonts', 'copy:images', 'copy:videos', 'styles', 'scripts', 'icons'),
         parallel('watch', 'server')
     )
 );
@@ -126,5 +132,5 @@ task('default',
 task('build',
     series(
         'clean',
-        parallel('copy:html', 'copy:fonts', 'copy:images', 'styles', 'scripts', 'icons'))
+        parallel('copy:html', 'copy:fonts', 'copy:images', 'copy:videos', 'styles', 'scripts', 'icons'))
 );
