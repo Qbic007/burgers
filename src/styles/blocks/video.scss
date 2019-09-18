@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   background-position: center center;
+  text-align: center;
 
   .title {
     margin-bottom: 80px;
@@ -16,4 +17,7 @@
 
 .video__player {
   outline: none;
+  width: 600px;
+  height: 400px;
+  max-width: 90vw;
 }

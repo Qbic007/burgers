@@ -1,5 +1,5 @@
 .slide {
-  background: url('images/bg/slider.jpg') no-repeat;
+  background: linear-gradient(to bottom, #F9B33B 48%, #EA8C38 74%, #F9B33B 100%);
   background-size: cover;
   padding: 0 70px;
   height: 100vh;
@@ -28,7 +28,9 @@
 }
 
 .slide__img {
-  max-height: 320px;
+  @include tablets() {
+    max-height: 250px;
+  }
 }
 
 .slide__img-container {

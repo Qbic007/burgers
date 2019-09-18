@@ -41,6 +41,7 @@ $(document).ready(function () {
             nextEl: '.slider__arrow-right',
             prevEl: '.slider__arrow-left',
         },
+        loop: true
     });
 
     let onePageScroller = new Swiper('.one-page-scroller', {
@@ -51,13 +52,15 @@ $(document).ready(function () {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        },
+        }
     });
 
     // кнопка заказать
 
-    document.querySelector('.js-order-button').addEventListener('click', function (e) {
-        e.preventDefault();
+    let orderButton = $('.js-order-button');
+    orderButton.on('click', function (elem) {
+        elem.preventDefault();
+
         onePageScroller.slideTo(7, 0);
     });
 
@@ -70,6 +73,12 @@ $(document).ready(function () {
 
         let self = $(this);
         onePageScroller.slideTo(self.data('page'), 0);
+    });
+
+    let scrollDownButton = $('.js-scroll-down-button');
+
+    scrollDownButton.on('click', function () {
+        onePageScroller.slideTo(1, 0);
     });
 
     // Якарта

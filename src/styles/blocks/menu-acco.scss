@@ -1,5 +1,5 @@
 $trigger-width: 80px;
-$text-width: 400px;
+$text-width: 600px;
 $content-width: $text-width + 20px;
 $li-width: $content-width + 20px;
 
@@ -21,7 +21,7 @@ $li-width: $content-width + 20px;
   &.active {
     width: $li-width;
 
-    @include phones() {
+    @include tablets() {
       flex: 1;
       width: unset;
     }
@@ -93,7 +93,7 @@ $li-width: $content-width + 20px;
   width: $text-width;
   line-height: 1.8;
 
-  @include phones {
+  @include tablets {
     padding: 25px 15px;
     width: auto;
   }
