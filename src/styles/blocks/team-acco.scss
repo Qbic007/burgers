@@ -6,7 +6,7 @@
 
 .team-acco__item {
   margin-bottom: 40px;
-  transition: height 2s;
+  transition: 0.5s;
 
   @include tablets {
     margin-bottom: 30px;

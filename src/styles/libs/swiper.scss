@@ -7,6 +7,7 @@
   display: flex;
   width: 100% !important;
   height: 100vh !important;
+
   &_column {
     flex-direction: column;
   }
@@ -56,5 +57,20 @@
     border: 1px white solid !important;
     top: -5px !important;
     left: -5px !important;
+    animation: bullet 0.3s;
+  }
+}
+
+@keyframes bullet {
+  from {
+    opacity: 0;
+    transform: scale(.7);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

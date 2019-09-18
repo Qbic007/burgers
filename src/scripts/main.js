@@ -11,7 +11,6 @@ $(document).ready(function () {
         $('#hamburgerMenu').show();
     });
 
-
     //аккордеоны
 
     accordeon('team');
@@ -33,7 +32,6 @@ $(document).ready(function () {
         });
     }
 
-
     //слайдер
 
     let swiper = new Swiper('.swiper-container', {
@@ -47,8 +45,8 @@ $(document).ready(function () {
     let onePageScroller = new Swiper('.one-page-scroller', {
         direction: 'vertical',
         slidesPerView: 1,
-        effect: 'fade',
         mousewheel: true,
+        effect: 'fade',
         pagination: {
             el: '.swiper-pagination',
             clickable: true,

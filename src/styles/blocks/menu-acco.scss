@@ -20,6 +20,7 @@ $li-width: $content-width + 20px;
 
   &.active {
     width: $li-width;
+    transition: 0.5s;
 
     @include tablets() {
       flex: 1;
