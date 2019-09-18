@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    //модальное меню
+
     let closeHamburgerMenu = $('#closeHamburgerMenu');
     closeHamburgerMenu.on('click', function () {
         $('#hamburgerMenu').hide();
@@ -9,15 +11,8 @@ $(document).ready(function () {
         $('#hamburgerMenu').show();
     });
 
-    let ingredientsCloseIcon = $('#ingredientsCloseIcon');
-    ingredientsCloseIcon.on('click', function () {
-        $('#ingredients').hide();
-    });
 
-    let compound = $('#compound');
-    compound.on('click', function () {
-        $('#ingredients').show();
-    });
+    //аккордеоны
 
     accordeon('team');
     accordeon('menu');
@@ -38,6 +33,9 @@ $(document).ready(function () {
         });
     }
 
+
+    //слайдер
+
     var swiper = new Swiper('.swiper-container', {
         navigation: {
             nextEl: '.slider__arrow-right',
@@ -45,7 +43,8 @@ $(document).ready(function () {
         },
     });
 
-    // Карта
+
+    // Якарта
 
     ymaps.ready(init);
 

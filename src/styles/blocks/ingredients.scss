@@ -26,6 +26,11 @@ $ingredients-icon-side: 35px;
 
 .ingredients__cross-container {
   margin-left: 15px;
+  display: none;
+
+  @include tablets() {
+    display: flex;
+  }
 }
 
 .ingredients__container {

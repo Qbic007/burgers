@@ -27,9 +27,15 @@
   }
 }
 
+.slide__img {
+  max-height: 320px;
+}
+
 .slide__img-container {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
   
   @include tablets() {
     width: 70%;
