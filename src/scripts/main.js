@@ -73,6 +73,7 @@ $(document).ready(function () {
 
         let self = $(this);
         onePageScroller.slideTo(self.data('page'), 0);
+        $('#hamburgerMenu').hide();
     });
 
     let scrollDownButton = $('.js-scroll-down-button');
@@ -165,9 +166,10 @@ $(document).ready(function () {
             xhr.send(data);
             xhr.addEventListener('load', () => {
                 if (xhr.response.status) {
-                    showModal('Отправка заказа', xhr.response.message);
+                    showPopup(xhr.response.message);
+                    myform.reset();
                 } else {
-                    showModal('Отправка заказа', 'Произошла ошибка');
+                    showPopup('Произошла ошибка');
                 }
             });
         }
@@ -206,6 +208,21 @@ $(document).ready(function () {
 
     modalCloseIcon.on('click', function () {
         modal.css('display', 'none');
+    });
+
+    //показ и закрытие попапа
+
+    let popup = $('#popup');
+    let popupContent = popup.find('.js-popup-content');
+    let popupCloseButton = popup.find('.js-popup-button');
+
+    function showPopup(content) {
+        popupContent.html(content);
+        popup.css('display', 'flex');
+    }
+
+    popupCloseButton.on('click', function () {
+        popup.css('display', 'none');
     });
 
     //модалка в отзывах
