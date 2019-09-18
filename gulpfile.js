@@ -51,7 +51,7 @@ task('styles', () => {
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem())
+        // .pipe(px2rem())
         .pipe(gulpif(env === 'prod', autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
@@ -62,11 +62,6 @@ task('styles', () => {
         .pipe(dest(DIST_PATH))
         .pipe(reload({ stream: true }));
 });
-
-const libs = [
-    'node_modules/jquery/dist/jquery.js',
-    'src/scripts/*.js'
-];
 
 task('scripts', () => {
     return src([...JS_LIBS, 'src/scripts/*.js'])

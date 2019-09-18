@@ -37,4 +37,11 @@ $(document).ready(function () {
             }
         });
     }
+
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.slider__arrow-right',
+            prevEl: '.slider__arrow-left',
+        },
+    });
 });

@@ -4,11 +4,14 @@
 
 .slider__arrow-left, .slider__arrow-right {
   position: absolute;
+  top: 0;
   width: rem(70px);
   height: 100%;
   display: flex;
   cursor: pointer;
   opacity: 0.5;
+  outline: none;
+  z-index: 10;
   
   &:hover {
     opacity: 1;
