@@ -593,7 +593,7 @@
                                             ккал
                                         </div>
                                     </div>
-                                    <img src="./images/slider/сhiken.png" alt="бургер" class="slide__img">
+                                    <img src="./images/slider/chiken.png" alt="бургер" class="slide__img">
                                 </div>
                                 <div class="slide__content-container">
                                     <h2 class="title title--color--white burger__title">chiken burger</h2>
@@ -959,7 +959,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Add Arrows -->
             <div class="slider__arrow-left">
                 <div class="slider__arrow-left-icon">
                     <svg class="icon">
@@ -1271,17 +1270,17 @@
                         <div class="order__form-row order__form-row_double">
                             <label class="order__form-block">
                                 <div class="order__form-label">Имя</div>
-                                <input class="order__form-input" name="name" type="text">
+                                <input class="order__form-input" name="name" type="text" required>
                             </label>
                             <label class="order__form-block">
                                 <div class="order__form-label">Телефон</div>
-                                <input class="order__form-input" name="phone" type="text">
+                                <input class="order__form-input" name="phone" type="text" required>
                             </label>
                         </div>
                         <div class="order__form-row">
                             <label class="order__form-block">
                                 <div class="order__form-label">E-mail</div>
-                                <input class="order__form-input" name="email" type="text">
+                                <input class="order__form-input" name="to" type="text" required>
                             </label>
                         </div>
                         <div class="order__form-row">
@@ -1314,7 +1313,7 @@
                             <label class="order__form-block">
                                 <div class="order__form-label">Комментарий</div>
                                 <textarea class="order__form-input order__form-input_textarea"
-                                          name="comment"></textarea>
+                                          name="comment" required></textarea>
                             </label>
                         </div>
                         <div class="order__form-buttons">
@@ -1433,6 +1432,26 @@
                 <use xlink:href="images/icons/sprite.svg#cross"></use>
             </svg>
         </a>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal__container js-modal-container">
+            <div class="modal__title-container">
+                <h3 class="modal__title js-modal-title">Заголовок модального окна</h3>
+                <div class="modal__close-container">
+                    <svg class="modal__close-icon icon js-modal-close-icon">
+                        <use xlink:href="images/icons/sprite.svg#cross"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal__content js-modal-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores atque autem delectus
+                dicta
+                doloribus dolorum exercitationem expedita, inventore ipsa minima neque, quasi qui quibusdam
+                reiciendis
+                tenetur vitae voluptas voluptatibus.
+            </div>
+        </div>
     </div>
 
     <script src="main.min.js"></script>

@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     //слайдер
 
-    var swiper = new Swiper('.swiper-container', {
+    let swiper = new Swiper('.swiper-container', {
         navigation: {
             nextEl: '.slider__arrow-right',
             prevEl: '.slider__arrow-left',
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
     ymaps.ready(init);
 
-    var placemarks = [
+    let placemarks = [
         {
             latitude: 59.93,
             longitude: 30.21,
@@ -74,7 +74,7 @@ $(document).ready(function () {
     ];
 
     function init() {
-        var map = new ymaps.Map('map', {
+        let map = new ymaps.Map('map', {
             center: [59.92, 30.31],
             zoom: 11,
             controls: ['zoomControl'],
@@ -82,7 +82,7 @@ $(document).ready(function () {
         });
 
         placemarks.forEach(function (obj) {
-            var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+            let placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
                     hintContent: '<div class="map__hint">' + obj.hintContent + '</div>',
                     balloonContent: obj.balloonContent,
                 },
@@ -99,4 +99,75 @@ $(document).ready(function () {
 
         map.setBounds(map.geoObjects.getBounds());
     }
+
+    // отправка формы
+
+    let orderForm = $('#order-form');
+    let orderFormSubmitButton = orderForm.find('[type="submit"]');
+    let fieldName = orderForm.find('[name="name"]');
+    let fieldPhone = orderForm.find('[name="phone"]');
+    let fieldComment = orderForm.find('[name="comment"]');
+    let fieldTo = orderForm.find('[name="to"]');
+
+    const myform = document.querySelector("#order-form");
+
+    orderFormSubmitButton.on('click', function (elem) {
+        elem.preventDefault();
+
+        if (validateForm(myform)) {
+            let data = new FormData();
+            data.append("name", fieldName.val());
+            data.append("phone", fieldPhone.val());
+            data.append("comment", fieldComment.val());
+            data.append("to", fieldTo.val());
+
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';
+            xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+            xhr.send(data);
+            xhr.addEventListener('load', () => {
+                if (xhr.response.status) {
+                    showModal('Отправка заказа', xhr.response.message);
+                } else {
+                    showModal('Отправка заказа', 'Произошла ошибка');
+                }
+            });
+        }
+    });
+
+    function validateForm(form) {
+        valid = validateField(form.elements.name);
+        valid = validateField(form.elements.phone);
+        valid = validateField(form.elements.comment);
+        valid = validateField(form.elements.to);
+
+        return valid;
+    }
+
+    function validateField(field) {
+        if (field.checkValidity()) {
+            return true;
+        }
+
+        $(field).attr('placeholder', 'Обязательное поле');
+        return false;
+    }
+
+    //показ и закрытие модального окна
+
+    let modal = $('#modal');
+    let modalTitle = modal.find('.js-modal-title');
+    let modalContent = modal.find('.js-modal-content');
+    let modalCloseIcon = modal.find('.js-modal-close-icon');
+
+    function showModal(title, content) {
+        modalTitle.text(title);
+        modalContent.html(content);
+        modal.css('display', 'flex');
+    }
+
+    modalCloseIcon.on('click', function () {
+        modal.hide();
+    });
 });

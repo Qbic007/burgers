@@ -1,0 +1,60 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $main-dark-grey;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    opacity: 0.9;
+  }
+}
+
+.modal__container {
+  position: relative;
+  max-width: 350px;
+  background-color: white;
+  padding: 20px 25px;
+  border-radius: 5px;
+  z-index: 110;
+  @include ubuntu();
+}
+
+.modal__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal__close-container {
+  right: 0;
+}
+
+.modal__title {
+  margin-right: 15px;
+  @include gagalin();
+}
+
+.modal__close-icon {
+  height: 20px;
+  width: 20px;
+  fill: $close-cross-orange;
+  cursor: pointer;
+}
+
+.modal__content {
+  font-size: 14px;
+  line-height: 24px;
+}
