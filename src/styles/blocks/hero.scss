@@ -3,7 +3,7 @@
   background-size: cover;
   position: relative;
   @include tablets {
-    padding-bottom: rem(100px);
+    padding-bottom: 100px;
   }
 }
 
@@ -24,10 +24,10 @@
 }
 
 .hero__right {
-  padding-top: rem(145px);
+  padding-top: 145px;
   @include tablets {
     text-align: center;
-    padding: rem(30px) 20% 0;
+    padding: 30px 20% 0;
   }
   @include phones {
     padding: 0 3%;
@@ -42,7 +42,7 @@
 }
 
 .hero__desc {
-  font-size: rem(65px);
+  font-size: 65px;
   color: white;
   @include lifehack;
   text-transform: lowercase;
@@ -64,27 +64,27 @@
 
 .down-arrow {
   position: absolute;
-  bottom: rem(20px);
+  bottom: 20px;
   left: 50%;
-  width: rem(60px);
+  width: 60px;
   transform: translateX(-50%);
   transition: .3s;
-  height: rem(60px);
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   &:hover {
     .down-arrow__icon {
-      margin-top: rem(-15px);
-      width: rem(45px);
-      height: rem(45px);
+      margin-top: -15px;
+      width: 45px;
+      height: 45px;
     }
   }
 }
 
 .down-arrow__icon {
-  width: rem(40px);
-  height: rem(40px);
+  width: 40px;
+  height: 40px;
   transition: .3s;
   fill: #fff;
 }

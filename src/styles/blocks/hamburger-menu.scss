@@ -19,17 +19,17 @@
 
 .hamburger-menu__logo {
 	position: absolute;
-	top: rem(10px);
-	left: rem(30px);
+	top: 10px;
+	left: 30px;
 }
 
 .hamburger-menu__close {
 	position: absolute;
-	right: rem(15px);
-	top: rem(15px);
-	width: rem(18px);
-	height: rem(18px);
-	padding: rem(15px);
+	right: 15px;
+	top: 15px;
+	width: 18px;
+	height: 18px;
+	padding: 15px;
 	box-sizing: content-box;
 
 	&:hover {

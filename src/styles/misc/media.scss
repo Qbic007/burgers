@@ -22,7 +22,3 @@
 		@content;
 	}
 }
-
-@function rem($px) {
-  @return $px / 16px + 0rem;
-}

@@ -51,7 +51,7 @@ task('styles', () => {
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        // .pipe(px2rem())
+        .pipe(px2rem())
         .pipe(gulpif(env === 'prod', autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false

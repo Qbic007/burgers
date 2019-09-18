@@ -6,9 +6,9 @@
   align-items: center;
   background-position: center center;
   .title {
-    margin-bottom: rem(80px);
+    margin-bottom: 80px;
     @include tablets {
-      margin-bottom: rem(40px);
+      margin-bottom: 40px;
     }
   }
 }
@@ -21,8 +21,8 @@
 }
 
 .best__item {
-  margin-bottom: rem(50px);
-  padding: 0 rem(15px);
+  margin-bottom: 50px;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,16 +31,16 @@
   @include phones {
     flex-direction: row;
     width: 100%;
-    margin-bottom: rem(25px);
+    margin-bottom: 25px;
   }
 }
 
 .best__picture {
-  width: rem(97px);
-  height: rem(89px);
-  margin-bottom: rem(25px);
+  width: 97px;
+  height: 89px;
+  margin-bottom: 25px;
   @include phones {
-    margin-right: rem(20px);
+    margin-right: 20px;
     width: 30%;
   }
 }
@@ -54,14 +54,14 @@
 }
 
 .best__title {
-  font-size: rem(24px);
+  font-size: 24px;
   @include lifehack();
   color: $main-dark-grey;
-  margin-bottom: rem(20px);
+  margin-bottom: 20px;
 }
 
 .best__desc-text {
-  font-size: rem(14px);
-  line-height: rem(24px);
+  font-size: 14px;
+  line-height: 24px;
   @include ubuntu();
 }

@@ -1,9 +1,11 @@
 html {
+  font-size: 62px;
+
   @include laptop {
-    font-size: rem(15px);
+    font-size: 56px;
   }
   @include phones {
-    font-size: rem(13px);
+    font-size: 50px;
   }
 }
 
@@ -13,7 +15,7 @@ body {
 }
 
 body {
-  font-size: rem(16px);
+  font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +34,7 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  max-width: rem(940px);
+  max-width: 940px;
   width: 95%;
   display: flex;
   flex-direction: column;

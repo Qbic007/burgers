@@ -5,7 +5,7 @@
 .slider__arrow-left, .slider__arrow-right {
   position: absolute;
   top: 0;
-  width: rem(70px);
+  width: 70px;
   height: 100%;
   display: flex;
   cursor: pointer;
@@ -18,7 +18,7 @@
   }
   
   @include phones() {
-    width: rem(35px);    
+    width: 35px;
   }
 }
 
@@ -35,8 +35,8 @@
 }
 
 .slider__arrow-left-icon, .slider__arrow-right-icon {
-  width: rem(29px);
-  height: rem(14px);
+  width: 29px;
+  height: 14px;
   transform: rotate(90deg);
 }
 

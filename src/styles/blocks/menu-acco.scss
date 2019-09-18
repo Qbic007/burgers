@@ -1,7 +1,7 @@
-$trigger-width: rem(80px);
-$text-width: rem(400px);
-$content-width: $text-width + rem(20px);
-$li-width: $content-width + rem(20px);
+$trigger-width: 80px;
+$text-width: 400px;
+$content-width: $text-width + 20px;
+$li-width: $content-width + 20px;
 
 .menu-acco {
   position: absolute;
@@ -58,7 +58,7 @@ $li-width: $content-width + rem(20px);
   display: flex;
   justify-content: flex-start;
   width: $content-width;
-  font-size: rem(40px);
+  font-size: 40px;
   color: #fff;
   @include gagalin;
   text-align: center;
@@ -68,11 +68,11 @@ $li-width: $content-width + rem(20px);
   transform-origin: 0 0;
   left: 50%;
   top: 100%;
-  margin-top: rem(-20px);
+  margin-top: -20px;
   z-index: 20;
 
   @include phones {
-    font-size: rem(26px);
+    font-size: 26px;
   }
 }
 
@@ -87,14 +87,14 @@ $li-width: $content-width + rem(20px);
 
 .menu-acco__text {
   @include ubuntu(light);
-  font-size: rem(14px);
+  font-size: 14px;
   color: #fff;
-  padding: rem(60px) rem(30px);
+  padding: 60px 30px;
   width: $text-width;
   line-height: 1.8;
 
   @include phones {
-    padding: rem(25px) rem(15px);
+    padding: 25px 15px;
     width: auto;
   }
 }

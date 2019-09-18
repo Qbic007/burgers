@@ -1,4 +1,4 @@
-$ingredients-icon-side: rem(35px);
+$ingredients-icon-side: 35px;
 
 .ingredients {
   position: absolute;
@@ -6,26 +6,26 @@ $ingredients-icon-side: rem(35px);
   left: $compound-side;
   background-color: white;
   opacity: 0.9;
-  border-radius: rem(5px);
-  padding: 0 rem(20px) rem(15px);
-  width: rem(270px);
-  font-size: rem(14px);
-  line-height: rem(24px);
+  border-radius: 5px;
+  padding: 0 20px 15px;
+  width: 270px;
+  font-size: 14px;
+  line-height: 24px;
   @include ubuntu();
   display: none;
   justify-content: space-between;
 
   @include tablets() {
-    width: rem(320px);
+    width: 320px;
   }
 
   @include phones() {
-    width: rem(360px);
+    width: 360px;
   }
 }
 
 .ingredients__cross-container {
-  margin-left: rem(15px);
+  margin-left: 15px;
 }
 
 .ingredients__container {
@@ -36,7 +36,7 @@ $ingredients-icon-side: rem(35px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: rem(15px);
+  margin-top: 15px;
 }
 
 .ingredients-params {
@@ -47,7 +47,7 @@ $ingredients-icon-side: rem(35px);
 .ingredients-icon {
   width: $ingredients-icon-side;
   height: $ingredients-icon-side;
-  margin-right: rem(20px);
+  margin-right: 20px;
 }
 
 .ingredients-name {
