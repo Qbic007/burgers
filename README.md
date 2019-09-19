@@ -2,5 +2,5 @@
 Frontend training project
 
 instructions:
-clone project
+clone project,
 npm install
